@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@mixin photo__variable {
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin section__variable {
+  color: $fontColor;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  border-top: 3px #a5b5af solid;
+  border-bottom: 3px #a5b5af solid;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 1.5rem;
+}
+$fontColor: #e2e2e2;
+
+// Global
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+// First Image and Text
+.img1 {
+  background-image: url(../images/valeriia-miller-ZpJlngzpvDg-unsplash.jpg);
+  @include photo__variable();
+  display: flex;
+  height: 100vh;
+
+  .text1 {
+    @include section__variable();
+    border: none;
+    height: 400px;
+    font-size: 2rem;
+  }
+}
+// Other Background Images
+.img2 {
+  background-image: url(../images/valeriia-miller-Xy7VCAI3X2E-unsplash.jpg);
+  @include photo__variable();
+}
+.img3 {
+  background-image: url(../images/valeriia-miller.jpg);
+  @include photo__variable();
+}
+
+// Section 1
+.section__1 {
+  background-color: #374d42;
+  @include section__variable();
+}
+
+// Section 2
+.section__2 {
+  background-color: #df868e;
+  @include section__variable();
+}
+
+// Section 3
+.section__3 {
+  background-color: #6d649c;
+  @include section__variable();
+  height: 100vh;
+  border-bottom: none;
+}
