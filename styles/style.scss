@@ -47,7 +47,7 @@ html {
   .text1 {
     @include section__variable();
     border: none;
-    height: 400px;
+    height: 600px;
     font-size: 2rem;
   }
 }
